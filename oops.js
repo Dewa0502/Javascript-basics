@@ -74,6 +74,19 @@ class ostrich extends bird{
 let hen = new bird()
 let Ostrich = new ostrich()
 
-console.log(hen.fly());
-console.log(Ostrich.fly());
+// method name is exactly the same but the behaviour is different
 
+// console.log(hen.fly());
+// console.log(Ostrich.fly());
+
+// Static Method
+
+class calculator{
+    static add(a,b){
+        return a+b;
+    }
+}
+
+//object won't be able to access the .add() method only class can be used to call it's method.PFB
+
+// console.log(calculator.add(5,8));
