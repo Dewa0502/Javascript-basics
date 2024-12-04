@@ -38,3 +38,36 @@ document
         task.lastElementChild.remove();
         
     })
+
+document
+    .getElementById("clickMeButton")
+    .addEventListener("dblclick",function(){
+        alert("Dewa Here!")
+    })
+
+document
+    .getElementById("teaList")
+    .addEventListener("click", function(event){
+        if(event.target && event.target.matches(".teaItem")){
+            alert(event.target.textContent)
+        }    
+    })
+
+document
+    .getElementById("feedbackForm")
+    .addEventListener('submit', function(event){
+        event.preventDefault();
+        let feedback = document.getElementById("feedbackInput").value;
+        console.log(feedback);
+        document.getElementById("feedbackDisplay").textContent = `Feedback is : ${feedback}`      
+    })
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById("domstatus").textContent = `DOM Fully loaded`;
+})
+
+document.getElementById("toggleHighlight")
+    .addEventListener('click',function(){
+        let descriptionText = document.getElementById("descriptionText");
+        descriptionText.classList.add("highlight");
+    })
